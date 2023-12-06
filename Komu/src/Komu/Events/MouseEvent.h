@@ -56,7 +56,7 @@ namespace Komu
     {
     public:
         inline int GetMouseButton() const
-        { return m_Button };
+        { return m_Button; }
 
         EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
@@ -98,6 +98,6 @@ namespace Komu
             return ss.str();
         }
 
-        EVENT_CLASS_TYPE(MouseButtonEvent)
+        EVENT_CLASS_TYPE(MouseButtonReleased)
     };
 }
