@@ -15,5 +15,5 @@ namespace Komu
 
     // To be defined in CLIENT
     Application* CreateApplication();
-}
+};
 
