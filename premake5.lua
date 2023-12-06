@@ -10,6 +10,12 @@ workspace "Komu"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Komu/vendor/glfw/include"
+
+include "Komu/vendor/glfw"
+
 project "Komu"
     location "Komu"
     kind "SharedLib"
@@ -30,8 +36,18 @@ project "Komu"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
     }
+
+    links 
+	{ 
+		"GLFW",
+		"opengl32.lib",
+        "dwmapi.lib",
+        "gdi32.lib",
+        "user32.lib"
+	}
 
     filter "system:windows"
         cppdialect "C++17"

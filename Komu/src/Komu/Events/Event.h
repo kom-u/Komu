@@ -1,5 +1,6 @@
 #pragma once
 
+#include "kmpch.h"
 #include "Komu/Core.h"
 
 namespace Komu

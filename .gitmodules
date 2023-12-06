@@ -1,3 +1,6 @@
 [submodule "Komu/vendor/spdlog"]
 	path = Komu/vendor/spdlog
 	url = git@github.com:gabime/spdlog.git
+[submodule "Komu/vendor/glfw"]
+	path = Komu/vendor/glfw
+	url = git@github.com:kom-u/glfw.git
