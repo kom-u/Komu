@@ -26,6 +26,7 @@ project "Komu"
 
     includedirs
     {
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 
@@ -74,8 +75,8 @@ project "Sandbox"
 
     includedirs
     {
-        "Komu/vendor/spdlog/include",
-        "Komu/src"
+        "Komu/src",
+        "Komu/vendor/spdlog/include"
     }
 
     links
