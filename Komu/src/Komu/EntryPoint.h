@@ -7,11 +7,15 @@ extern Komu::Application* Komu::CreateApplication();
 int main(int argc, char** argv)
 {
     Komu::Log::Init();
+    KM_CORE_WARN("Initialized Log!");
+    int a = 5;
+    KM_INFO("Hello! Var={0}", a);
 
-    auto app = Komu::CreateApplication();
+    Komu::Application* app = Komu::CreateApplication();
     app->Run();
     delete app;
 
     return 0;
 }
+
 #endif
