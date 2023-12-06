@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Komu
 {
     class KOMU_API KeyEvent : public Event

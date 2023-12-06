@@ -34,6 +34,7 @@
     <ClInclude Include="src\Komu\Log.h">
       <Filter>Komu</Filter>
     </ClInclude>
+    <ClInclude Include="src\kmpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Komu\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Komu\Log.cpp">
       <Filter>Komu</Filter>
     </ClCompile>
+    <ClCompile Include="src\kmpch.cpp" />
   </ItemGroup>
 </Project>

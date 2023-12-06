@@ -18,6 +18,9 @@ project "Komu"
     targetdir("bin/" .. outputdir .. "/%{prj.name}")
     objdir("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "kmpch.h"
+    pchsource "%{prj.name}/src/kmpch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",

@@ -2,9 +2,6 @@
 
 #include "Komu/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Komu
 {
 

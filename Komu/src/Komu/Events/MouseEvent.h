@@ -2,16 +2,12 @@
 
 #include "Event.h"
 
-#include "Komu/Core.h"
-#include <sstream>
-#include <string>
-
 namespace Komu
 {
     class KOMU_API MouseMovedEvent : public Event
     {
     public:
-        MouseMovedEvent(float x, float y):
+        MouseMovedEvent(float x, float y) :
             m_MouseX(x), m_MouseY(y) {}
 
         inline float GetX() const { return m_MouseX; }
@@ -25,7 +21,7 @@ namespace Komu
         }
 
         EVENT_CLASS_TYPE(MouseMoved)
-        EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+            EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
     private:
         float m_MouseX, m_MouseY;
@@ -49,7 +45,7 @@ namespace Komu
         }
 
         EVENT_CLASS_TYPE(MouseScrolled)
-        EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+            EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
     private:
         float m_XOffset, m_YOffset;
@@ -59,13 +55,13 @@ namespace Komu
     class KOMU_API MouseButtonEvent : public Event
     {
     public:
-        inline int GetMouseButton() const 
+        inline int GetMouseButton() const
         { return m_Button };
 
         EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
     protected:
-        MouseButtonEvent(int button) : 
+        MouseButtonEvent(int button) :
             m_Button(button) {}
 
         int m_Button;
