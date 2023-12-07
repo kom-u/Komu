@@ -37,6 +37,12 @@
     <ClInclude Include="src\Komu\Events\MouseEvent.h">
       <Filter>Komu\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Komu\Layer.h">
+      <Filter>Komu</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Komu\LayerStack.h">
+      <Filter>Komu</Filter>
+    </ClInclude>
     <ClInclude Include="src\Komu\Log.h">
       <Filter>Komu</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Komu\Application.cpp">
+      <Filter>Komu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Komu\Layer.cpp">
+      <Filter>Komu</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Komu\LayerStack.cpp">
       <Filter>Komu</Filter>
     </ClCompile>
     <ClCompile Include="src\Komu\Log.cpp">

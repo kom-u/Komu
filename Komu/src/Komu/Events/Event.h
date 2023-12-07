@@ -35,7 +35,7 @@ namespace Komu
         EventCategoryMouseButton = BIT(4)
     };
 
-    #define EVENT_CLASS_TYPE(type)\
+#define EVENT_CLASS_TYPE(type)\
                 static EventType GetStaticType()\
                 { return EventType::##type; }\
                 \
@@ -45,7 +45,7 @@ namespace Komu
                 virtual const char* GetName() const override\
                 { return #type; }
 
-    #define EVENT_CLASS_CATEGORY(category)\
+#define EVENT_CLASS_CATEGORY(category)\
                 virtual int GetCategoryFlags() const override\
                 { return category; }
 
@@ -67,8 +67,11 @@ namespace Komu
         inline bool IsInCategory(EventCategory category)
         { return GetCategoryFlags() & category; }
 
+        inline bool IsHandled()
+        { return m_IsHandled; }
+
     protected:
-        bool m_Handled = false;
+        bool m_IsHandled = false;
     };
 
     class EventDispatcher
@@ -85,7 +88,7 @@ namespace Komu
         {
             if (m_Event.GetEventType() == T::GetStaticType())
             {
-                m_Event.m_Handled = func(*(T*) &m_Event);
+                m_Event.m_IsHandled = func(*(T*) &m_Event);
                 return true;
             }
             return false;

@@ -8,6 +8,8 @@ workspace "Komu"
         "Dist"
     }
 
+    startproject "Sandbox"
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
@@ -67,15 +69,18 @@ project "Komu"
 
     filter "configurations:Debug"
         defines "KM_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
 
     filter "configurations:Release"
         defines "KM_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "KM_DIST"
+        buildoptions "/MD"
         optimize "On"
 
 project "Sandbox"
@@ -115,12 +120,15 @@ project "Sandbox"
 
     filter "configurations:Debug"
         defines "KM_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "KM_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "KM_DIST"
+        buildoptions "/MD"
         optimize "On"
